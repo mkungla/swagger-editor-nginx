@@ -1,9 +1,20 @@
 language: bash
 
+# Use docker service
 services: docker
 
+# Install dependencies
 install:
-  # Install dependencies
+  - echo "Install dependencies"
 
+# Tasks and scripts to run before tests
+before_script:
+  - echo "Prepare to run test suites"
+
+# Run tests suites
+script:
+  - echo "run all the tests"
+
+# After tests
 after_script:
   - docker images
