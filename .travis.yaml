@@ -1,0 +1,9 @@
+language: bash
+
+services: docker
+
+install:
+  # Install dependencies
+
+after_script:
+  - docker images

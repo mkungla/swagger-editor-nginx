@@ -1,0 +1,3 @@
+[submodule "vendor/official-images"]
+	path = vendor/official-images
+	url = https://github.com/docker-library/official-images.git
