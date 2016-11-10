@@ -1,0 +1,15 @@
+# how diffs are generated
+*.php diff=php
+
+# end-of-line normalization
+* eol=lf
+
+* text=auto
+*.js text
+*.html text
+*.md text
+.gitattributes text
+.gitignore text
+Dockerfile text
+.yaml text
+LICENSE text
