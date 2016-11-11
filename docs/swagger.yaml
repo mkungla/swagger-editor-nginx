@@ -1,0 +1,62 @@
+swagger: "2.0"
+################################################################################
+#                              API Information                                 #
+################################################################################
+info:
+  version: "1.0.0"
+  title: Your API title
+
+# Your local or remote API server
+host: localhost
+
+# basePath prefixes all resource paths
+basePath: /api/v1
+
+schemes:
+  - http  # should avoid to use it
+  - https
+
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+
+################################################################################
+#                                  Security                                    #
+################################################################################
+
+
+################################################################################
+#                                 Parameters                                   #
+################################################################################
+
+
+################################################################################
+#                                    Paths                                     #
+################################################################################
+paths:
+
+  ## Check connection status
+  /status:
+    get:
+      description: Check API status.
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Status'
+
+################################################################################
+#                                 Definitions                                  #
+################################################################################
+definitions:
+  Status:
+    type: object
+    properties:
+      code:
+        type: integer
+      message:
+        type: string

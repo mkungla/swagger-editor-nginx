@@ -1,0 +1,26 @@
+# Use Docker compose yml version 2
+# https://docs.docker.com/compose/compose-file/#/version-2
+version: '2'
+
+services:
+
+  # SERVICE 1. Lets build our custom Swagger Editor image from Dockerfile found in ./src
+  swagger-editor:
+
+    # We define local name and version for our custom swagger-editor image so we can distinguish production versions
+    image: mkungla/swagger-editor-nginx:dev
+
+    # If we did not find mkungla/swagger-editor-nginx:dev on you computer then let's build it.
+    # Docker expects to find 'Dockerfile' from defined path below
+    build: ../src
+
+    # Let's map in-container web server port 80 to your computers port 8005
+    # So after running (docker-compose up) You can access swagger-editor from http://localhost:8005
+    # You are free to choose any free port instead of 8005.
+    ports:
+      - "8005:80"
+
+    # Lets attach your api definitions yaml file
+    volumes:
+      - ../docs/swagger.yaml:/var/www/localhost/htdocs/mount/swagger.yaml
+      

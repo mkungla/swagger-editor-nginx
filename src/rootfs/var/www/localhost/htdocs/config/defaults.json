@@ -1,0 +1,22 @@
+{
+  "disableCodeGen": true,
+  "examplesFolder": "mount/",
+  "editorOptions": {
+    "theme": "ace/theme/atom_dark"
+  },
+  "exampleFiles": [
+    "swagger.yaml"
+  ],
+  "autocompleteExtension": {},
+  "useBackendForStorage": true,
+  "backendThrottle": 200,
+  "keyPressDebounceTime": 200,
+  "backendEndpoint": "backend/index.php",
+  "useYamlBackend": true,
+  "disableFileMenu": true,
+  "headerBranding": false,
+  "disableNewUserIntro": true,
+  "enableTryIt": true,
+  "importProxyUrl": "",
+  "pointerResolutionBasePath": null
+}
