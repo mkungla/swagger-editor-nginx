@@ -18,3 +18,6 @@ script:
 # After tests
 after_script:
   - docker images
+
+notifications:
+  email: false
